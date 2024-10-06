@@ -108,6 +108,33 @@ class CountryInfo:
             logging.error(f"Error fetching weather data: {err}")
             return {}
 
+    def check_exist_country(self, country) -> bool | list[str]:
+
+        def check_exist():
+            CHECK_LIST = []
+            try:
+                response = requests.get(r"https://restcountries.com/v3.1/all")
+                response.raise_for_status()
+
+                response_json = response.json()
+
+                COUNTRY_DATA = [check["name"]["common"].lower()
+                                for check in response_json]
+
+                if not (country.lower() in COUNTRY_DATA):
+                    for checking_name in COUNTRY_DATA:
+                        if country in checking_name[:len(country)]:
+                            CHECK_LIST.append(checking_name)
+
+                else:
+                    CHECK_LIST = True
+
+                return CHECK_LIST
+
+            except Exception as e:
+                logging.exception(f"Unexpected error in get_image: {e}")
+        return check_exist()
+
 
 info = CountryInfo()
 
@@ -129,52 +156,58 @@ def main():
 
         try:
 
-            response = requests.get(
-                f"https://restcountries.com/v3.1/name/{name_country}")
-            response.raise_for_status()
+            result = info.check_exist_country(name_country)
+            if result == True:
+                response = requests.get(
+                    f"https://restcountries.com/v3.1/name/{name_country}")
+                response.raise_for_status()
 
-            print("please wait")
-            sleep(0.5)
-            os.system(os_model)
-
-            print(info.show_details(response.json()), "\n")
-
-            if input("do you want to see the flag (yes/etc): ") == "yes":
-                logging.debug("fetching image and showing it")
+                print("please wait")
                 sleep(0.5)
-                info.get_image(response.json(), folder_name=name_country)
+                os.system(os_model)
 
-                logging.debug(
-                    "ending of fetching and adding to specefic folder")
-                print("image added to folders")
+                print(info.show_details(response.json()), "\n")
 
-                if input("do you want to be shown on cmd?") == "yes":
-                    print(info.show_img_cmd(rf"{os.getcwd()}\{
-                          name_country}_img\{name_country}"))
+                if input("do you want to see the flag (yes/etc): ") == "yes":
+                    logging.debug("fetching image and showing it")
+                    sleep(0.5)
+                    info.get_image(response.json(), folder_name=name_country)
 
-                sleep(6)
-            os.system(os_model)
+                    logging.debug(
+                        "ending of fetching and adding to specefic folder")
+                    print("image added to folders")
 
-            if input("do you want to know the forecast for this country(yes/etc): ") == "yes":
-                day = int(
-                    input("which upcoming day would you want to know about : "))
+                    if input("do you want to be shown on cmd?") == "yes":
+                        print(info.show_img_cmd(rf"{os.getcwd()}\{
+                            name_country}_img\{name_country}"))
 
-                # region calculating time
-                date_now = datetime.datetime.now()
-                time_delta = datetime.timedelta(day)
-                res_data = date_now + time_delta
-                format_data = res_data.strftime("%Y-%m-%d")
-                # endregion
-                response_weather = requests.get(
-                    f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{name_country}/{format_data}?key=ERMW3K6222K5DZ2Y2SCJ8R3UV")
+                    sleep(6)
+                os.system(os_model)
 
-                result = info.show_weather(response_weather.json())
-                logging.debug("printing the info!")
-                for keys, val in result.items():
-                    print(f"{keys}:{val}")
+                if input("do you want to know the forecast for this country(yes/etc): ") == "yes":
+                    day = int(
+                        input("which upcoming day would you want to know about : "))
 
-            sleep(5)
-            os.system(os_model)
+                    # region calculating time
+                    date_now = datetime.datetime.now()
+                    time_delta = datetime.timedelta(day)
+                    res_data = date_now + time_delta
+                    format_data = res_data.strftime("%Y-%m-%d")
+                    # endregion
+                    response_weather = requests.get(
+                        f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{name_country}/{format_data}?key=ERMW3K6222K5DZ2Y2SCJ8R3UV")
+
+                    result = info.show_weather(response_weather.json())
+                    logging.debug("printing the info!")
+                    for keys, val in result.items():
+                        print(f"{keys}:{val}")
+
+                sleep(5)
+                os.system(os_model)
+            else:
+                logging.warning("user has inputed incorectly")
+                print({"Did You mean": info.check_exist_country(country=name_country)})
+                continue
 
         except requests.HTTPError as err:
             logging.ERROR({"Http Error Has Happend": err})
