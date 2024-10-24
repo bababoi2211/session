@@ -1,0 +1,210 @@
+2024-10-24 13:44:29,893 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2024-10-24 13:44:30,906 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getMe HTTP/1.1" 200 258
+2024-10-24 13:44:30,906 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2024-10-24 13:44:41,014 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=1&timeout=20 HTTP/1.1" 200 428
+2024-10-24 13:44:41,014 - DEBUG - User has Entered Command help
+2024-10-24 13:44:41,022 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: /help
+2024-10-24 13:44:41,022 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2024-10-24 13:44:41,932 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Available+commands%3A%0A%3Cinfo_country%3E%3Aget+information+about+the+country%28Region%2FCurrency%2FCapital%2F...%29%0A%0A%3Cforcast%3E%3Aget+information+about+forecast+of+the+country+%28with+specefic+Date%29%0A%0A%3Cshow_flag%3E%3Ashows+the+flag+of+the+chossen+country+on+chat%28jpeg%2Ftext%29%0A&reply_markup=%7B%22keyboard%22%3A%5B%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%5D%2C%22resize_keyboard%22%3Atrue%7D HTTP/1.1" 200 535
+2024-10-24 13:44:49,106 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657321&timeout=20 HTTP/1.1" 200 389
+2024-10-24 13:44:49,106 - DEBUG - Entering the info function
+2024-10-24 13:44:49,106 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Info Country\U0001f914
+2024-10-24 13:44:49,307 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=please+Enter+the+Country+That+you+want+to+know%3A&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 332
+2024-10-24 13:44:58,210 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657322&timeout=20 HTTP/1.1" 200 369
+2024-10-24 13:44:58,210 - DEBUG - Entering the part A of info
+2024-10-24 13:44:58,210 - DEBUG - checking the existence of the country
+2024-10-24 13:44:58,210 - DEBUG - cheking the database for the existence of this country 
+2024-10-24 13:44:58,210 - DEBUG - accesing all of the data
+2024-10-24 13:44:58,226 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-10-24 13:44:58,226 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Iran
+2024-10-24 13:44:59,968 - DEBUG - https://restcountries.com:443 "GET /v3.1/all HTTP/1.1" 200 171178
+2024-10-24 13:45:00,629 - DEBUG - message has passed all the checks
+2024-10-24 13:45:00,637 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-10-24 13:45:01,711 - DEBUG - https://restcountries.com:443 "GET /v3.1/name/Iran HTTP/1.1" 200 2222
+2024-10-24 13:45:01,711 - INFO - Entering the show details function
+2024-10-24 13:45:01,711 - INFO - making details printable for the user
+2024-10-24 13:45:01,903 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=%7B%27Full+name+of+this+country%27%3A+%27Islamic+Republic+of+Iran%27%2C+%0A+%27capital%27%3A+%5B%27Tehran%27%5D%2C+%0A+%27currency+of+this+country%27%3A+%7B%27name%27%3A+%7B%27IRR%27%3A+%7B%27name%27%3A+%27Iranian+rial%27%2C+%0A+%27symbol%27%3A+%27%EF%B7%BC%27%7D%7D%2C+%0A+%27international+symbol%27%3A+%27IRR%27%7D%2C+%0A+%27international+name%27%3A+%27Iranian+rial%27%2C+%0A+%27languages%27%3A+%27Persian+%28Farsi%29%27%2C+%0A+%27Region%27%3A+%27Asia%27%7D&reply_markup=%7B%22keyboard%22%3A%5B%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%5D%2C%22resize_keyboard%22%3Atrue%7D HTTP/1.1" 200 598
+2024-10-24 13:45:18,385 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657323&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:45:26,996 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657323&timeout=20 HTTP/1.1" 200 383
+2024-10-24 13:45:26,996 - DEBUG - Entering command flag handler  
+2024-10-24 13:45:26,996 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Flags \U0001f6a9
+2024-10-24 13:45:27,205 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Enter+the+Country+%3A+&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 304
+2024-10-24 13:45:32,833 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657324&timeout=20 HTTP/1.1" 200 374
+2024-10-24 13:45:32,833 - DEBUG - Entering command flag handler (A) 
+2024-10-24 13:45:32,833 - DEBUG - checking the existence of the country
+2024-10-24 13:45:32,833 - DEBUG - accesing all of the data
+2024-10-24 13:45:32,833 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-10-24 13:45:32,833 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Australia
+2024-10-24 13:45:34,166 - DEBUG - https://restcountries.com:443 "GET /v3.1/all HTTP/1.1" 200 171178
+2024-10-24 13:45:35,428 - DEBUG - message has passed all the if statment
+2024-10-24 13:45:35,428 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-10-24 13:45:36,522 - DEBUG - https://restcountries.com:443 "GET /v3.1/name/Australia HTTP/1.1" 200 1624
+2024-10-24 13:45:36,522 - INFO - Entering get_image function
+2024-10-24 13:45:36,522 - DEBUG - Flag URL: https://flagcdn.com/w320/au.png, File Name: Australia
+2024-10-24 13:45:36,522 - DEBUG - Starting new HTTPS connection (1): flagcdn.com:443
+2024-10-24 13:45:37,538 - DEBUG - https://flagcdn.com:443 "GET /w320/au.png HTTP/1.1" 200 1618
+2024-10-24 13:45:37,538 - INFO - Image saved at images/Australia_img\Australia
+2024-10-24 13:45:37,743 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=image+has+been+created.&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 308
+2024-10-24 13:45:37,955 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=How+you+Want+to+be+shown+%3F&reply_markup=%7B%22keyboard%22%3A%5B%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Shows+with+symbole+%5Cud83d%5Cudcea%22%7D%5D%2C%5B%7B%22text%22%3A%22Send+Image+%5Cud83d%5Cuddfa%5Cufe0f%22%7D%5D%5D%2C%22resize_keyboard%22%3Atrue%7D HTTP/1.1" 200 311
+2024-10-24 13:45:41,734 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657325&timeout=20 HTTP/1.1" 200 394
+2024-10-24 13:45:41,734 - DEBUG - Entering the image handler func.
+2024-10-24 13:45:41,747 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Send Image \U0001f5fa\ufe0f
+2024-10-24 13:45:42,005 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Here+is+your+image.%0A HTTP/1.1" 200 304
+2024-10-24 13:45:42,301 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendPhoto?chat_id=99582989&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 635
+2024-10-24 13:45:46,138 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657326&timeout=20 HTTP/1.1" 200 428
+2024-10-24 13:45:46,138 - DEBUG - User has Entered Command help
+2024-10-24 13:45:46,138 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: /help
+2024-10-24 13:45:46,354 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=You+Already+clicked+this+command.+&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 318
+2024-10-24 13:45:56,170 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657327&timeout=20 HTTP/1.1" 200 428
+2024-10-24 13:45:56,170 - DEBUG - User has Entered Command help
+2024-10-24 13:45:56,186 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: /help
+2024-10-24 13:45:56,483 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Available+commands%3A%0A%3Cinfo_country%3E%3Aget+information+about+the+country%28Region%2FCurrency%2FCapital%2F...%29%0A%0A%3Cforcast%3E%3Aget+information+about+forecast+of+the+country+%28with+specefic+Date%29%0A%0A%3Cshow_flag%3E%3Ashows+the+flag+of+the+chossen+country+on+chat%28jpeg%2Ftext%29%0A&reply_markup=%7B%22keyboard%22%3A%5B%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Shows+with+symbole+%5Cud83d%5Cudcea%22%7D%5D%2C%5B%7B%22text%22%3A%22Send+Image+%5Cud83d%5Cuddfa%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%5D%2C%22resize_keyboard%22%3Atrue%7D HTTP/1.1" 200 535
+2024-10-24 13:46:08,980 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657328&timeout=20 HTTP/1.1" 200 391
+2024-10-24 13:46:08,980 - DEBUG - Entering forecast handler.
+2024-10-24 13:46:08,980 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2024-10-24 13:46:08,997 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Forcast \U0001f3de\ufe0f
+2024-10-24 13:46:10,000 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Which+Forcast+of+Country+you+want+to+know+about%3F&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 333
+2024-10-24 13:46:24,856 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657329&timeout=20 HTTP/1.1" 200 373
+2024-10-24 13:46:24,856 - DEBUG - Entering the image handler func part (A) 
+2024-10-24 13:46:24,856 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Thailand
+2024-10-24 13:46:24,856 - DEBUG - checking the existence of the country
+2024-10-24 13:46:24,856 - DEBUG - accesing all of the data
+2024-10-24 13:46:24,856 - DEBUG - Starting new HTTPS connection (1): restcountries.com:443
+2024-10-24 13:46:26,186 - DEBUG - https://restcountries.com:443 "GET /v3.1/all HTTP/1.1" 200 171178
+2024-10-24 13:46:27,336 - DEBUG - message has passed all the if statment
+2024-10-24 13:46:27,509 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Please+Enter+the+day+you+want+to+know+about+the+forecast%28Like+%3A+2%28days%29+or+3%2C...+%29%3A HTTP/1.1" 200 368
+2024-10-24 13:46:45,029 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657330&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:46:51,167 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657330&timeout=20 HTTP/1.1" 200 380
+2024-10-24 13:46:51,167 - DEBUG - Entering the forcast handler part(B)
+2024-10-24 13:46:51,167 - DEBUG - Calculating the enter day
+2024-10-24 13:46:51,167 - ERROR - {'Base Error has happend': ValueError("invalid literal for int() with base 10: 'Kir to danial 4'")}
+2024-10-24 13:46:51,167 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Kir to danial 4
+2024-10-24 13:46:51,377 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=invalid+literal+for+int%28%29+with+base+10%3A+%27Kir+to+danial+4%27 HTTP/1.1" 200 342
+2024-10-24 13:46:56,602 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657331&timeout=20 HTTP/1.1" 200 366
+2024-10-24 13:46:56,602 - DEBUG - Entering the forcast handler part(B)
+2024-10-24 13:46:56,602 - DEBUG - Calculating the enter day
+2024-10-24 13:46:56,602 - DEBUG - Starting new HTTPS connection (1): weather.visualcrossing.com:443
+2024-10-24 13:46:56,610 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: 4
+2024-10-24 13:46:58,238 - DEBUG - https://weather.visualcrossing.com:443 "GET /VisualCrossingWebServices/rest/services/timeline/Thailand/2024-10-28?key=ERMW3K6222K5DZ2Y2SCJ8R3UV HTTP/1.1" 200 1687
+2024-10-24 13:46:58,238 - INFO - starting the show_weather function
+2024-10-24 13:46:58,238 - DEBUG - printing the info!
+2024-10-24 13:46:58,433 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=timezone%09%09%3A%09%09Asia%2FBangkok%0A HTTP/1.1" 200 310
+2024-10-24 13:46:59,046 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=datetime%09%09%3A%09%092024-10-28%0A HTTP/1.1" 200 308
+2024-10-24 13:46:59,251 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=temp%09%09%3A%09%0977.1%0A HTTP/1.1" 200 298
+2024-10-24 13:46:59,460 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=humidity%09%09%3A%09%0986.4%0A HTTP/1.1" 200 302
+2024-10-24 13:46:59,663 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=windspeed%09%09%3A%09%098.1%0A HTTP/1.1" 200 302
+2024-10-24 13:46:59,874 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=description%09%09%3A%09%09Cloudy+skies+throughout+the+day+with+storms+possible.%0A HTTP/1.1" 200 354
+2024-10-24 13:46:59,874 - DEBUG - Message Has been Sended
+2024-10-24 13:47:16,776 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657332&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:47:28,749 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657332&timeout=20 HTTP/1.1" 200 371
+2024-10-24 13:47:28,749 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: Thanks
+2024-10-24 13:47:28,967 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=please+Enter+Valid+Argument+%28%27Thanks%27+Is+Not+Valid+Argument%29%0AYou+Can+Start+With+this+command%3A%0A%2Fhelp%0A%2Fstart&reply_parameters=%7B%22message_id%22%3A800%7D HTTP/1.1" 200 833
+2024-10-24 13:47:34,685 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657333&timeout=20 HTTP/1.1" 200 428
+2024-10-24 13:47:34,685 - DEBUG - User has Entered Command help
+2024-10-24 13:47:34,701 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: /help
+2024-10-24 13:47:34,902 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=You+Already+clicked+this+command.+&reply_markup=%7B%22remove_keyboard%22%3Atrue%7D HTTP/1.1" 200 318
+2024-10-24 13:47:38,983 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657334&timeout=20 HTTP/1.1" 200 428
+2024-10-24 13:47:38,983 - DEBUG - User has Entered Command help
+2024-10-24 13:47:38,998 - DEBUG - \U0001d469\U0001d486\U0001d48f  [99582989]: /help
+2024-10-24 13:47:39,245 - DEBUG - https://api.telegram.org:443 "POST /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/sendMessage?chat_id=99582989&text=Available+commands%3A%0A%3Cinfo_country%3E%3Aget+information+about+the+country%28Region%2FCurrency%2FCapital%2F...%29%0A%0A%3Cforcast%3E%3Aget+information+about+forecast+of+the+country+%28with+specefic+Date%29%0A%0A%3Cshow_flag%3E%3Ashows+the+flag+of+the+chossen+country+on+chat%28jpeg%2Ftext%29%0A&reply_markup=%7B%22keyboard%22%3A%5B%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Shows+with+symbole+%5Cud83d%5Cudcea%22%7D%5D%2C%5B%7B%22text%22%3A%22Send+Image+%5Cud83d%5Cuddfa%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%2C%5B%7B%22text%22%3A%22Info+Country%5Cud83e%5Cudd14%22%7D%2C%7B%22text%22%3A%22Flags+%5Cud83d%5Cudea9%22%7D%5D%2C%5B%7B%22text%22%3A%22Forcast+%5Cud83c%5Cudfde%5Cufe0f%22%7D%5D%5D%2C%22resize_keyboard%22%3Atrue%7D HTTP/1.1" 200 535
+2024-10-24 13:47:59,159 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:48:19,334 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:48:39,451 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:48:59,683 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:49:19,862 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:49:40,035 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:50:00,208 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:50:20,372 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:50:40,556 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:51:00,826 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:51:20,992 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 13:51:41,167 - DEBUG - https://api.telegram.org:443 "GET /bot7817179572:AAFxG-Uuf4J_isk4asYHpTjrZR3Ger8o34k/getUpdates?offset=333657335&timeout=20 HTTP/1.1" 200 23
+2024-10-24 14:00:38,984 - ERROR - Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+2024-10-24 14:00:39,000 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 539, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 330, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DANI\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+
+2024-10-24 14:00:42,012 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
